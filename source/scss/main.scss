@@ -1,0 +1,46 @@
+$nav-tabs-link-active-color: #fff;
+$nav-pills-link-active-bg: #2e3191;
+$font-family-base: "Arimo", sans-serif;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/type";
+
+/*
+@font-face {
+  font-family: 'Arimo', sans-serif;
+  src: url("../fonts/arimo-regular-webfont.woff2") format("woff2"), url("../fonts/arimo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo', sans-serif;
+  src: url("../fonts/arimo-bold-webfont.woff2") format("woff2"), url("../fonts/arimo-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arimo', sans-serif;
+  src: url("../fonts/arimo-italic-webfont.woff2") format("woff2"), url("../fonts/arimo-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+*/
+
+
+body {
+  color: #525c77;
+}
+
