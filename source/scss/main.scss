@@ -2,6 +2,8 @@ $nav-tabs-link-active-color: #fff;
 $nav-pills-link-active-bg: #2e3191;
 $font-family-base: "Arimo", sans-serif;
 
+
+@import "responsive-fonts.scss";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -40,7 +42,4 @@ $font-family-base: "Arimo", sans-serif;
 */
 
 
-body {
-  color: #525c77;
-}
 
