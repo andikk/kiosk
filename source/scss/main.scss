@@ -13,9 +13,10 @@ $primary: #356292;
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/button-group";
 @import "../../node_modules/bootstrap/scss/card";
-
-
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/popover";
 
 /*
 @font-face {
@@ -43,6 +44,7 @@ $primary: #356292;
 }
 */
 
+//Стили для главной страницы
 body {
   background: url("../img/background.png");
   background-repeat: repeat;
@@ -51,10 +53,6 @@ body {
 .btn-menu-lg {
   width: 30%;
   white-space: normal;
-}
-
-.btn-menu-sm {
-  width: 12.4%;
 }
 
 .news {
@@ -70,4 +68,36 @@ body {
   color: #fff;
   background-color: $primary;
 }
+
+//Стили для страницы Корпуса
+.map {
+  position: relative;
+}
+
+.btn-way {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+
+    @include media-breakpoint-up(xl) {
+      left: 20px;
+
+    }
+}
+
+.tab-bg {
+  background-color: #fff;
+  margin-top: -2px;
+}
+
+.tab-title {
+  background-color: #dee2e6;
+  font-size: 20px;
+}
+
+.btn-korpus {
+  width: 8%;
+}
+
+
 
