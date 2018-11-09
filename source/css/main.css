@@ -5604,3 +5604,15 @@ body {
 
 .btn-korpus {
   width: 8%; }
+
+.vp1 {
+  background-color: transparent;
+  background-image: url("../img/p1.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: left;
+  height: 77px;
+  padding-left: 115px;
+  padding-top: 26px;
+  font-size: 20px; }
