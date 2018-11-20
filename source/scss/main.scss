@@ -99,18 +99,83 @@ body {
 }
 
 //Стили для страницы Визитка
-.vp1 {
-  background-color: transparent;
-  background-image: url("../img/p1.png");
+%icon {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position-y: top;
-  background-position-x: left;
+  background-position-x: center;
+  width: 540px;
   height: 77px;
-  padding-left: 115px;
-  padding-top: 26px;
-  font-size: 20px;
-
+  font-size: 16px;
 }
 
+.icon1 {
+  @extend %icon;
+  background-image: url("../img/p1.png");
+}
+
+.icon2 {
+  @extend %icon;
+  background-image: url("../img/p2.png");
+}
+
+.icon3 {
+  @extend %icon;
+  background-image: url("../img/p3.png");
+}
+
+.icon4 {
+  @extend %icon;
+  background-image: url("../img/p4.png");
+}
+
+.icon5 {
+  @extend %icon;
+  background-image: url("../img/p5.png");
+}
+
+.icon6 {
+  @extend %icon;
+  background-image: url("../img/p6.png");
+}
+
+.icon7 {
+  @extend %icon;
+  background-image: url("../img/p7.png");
+}
+
+.icon8 {
+  @extend %icon;
+  background-image: url("../img/p8.png");
+}
+
+.icon9 {
+  @extend %icon;
+  background-image: url("../img/p9.png");
+}
+
+.icon10 {
+  @extend %icon;
+  background-image: url("../img/p10.png");
+}
+
+.icon11 {
+  @extend %icon;
+  background-image: url("../img/p11.png");
+}
+
+.icon12 {
+  @extend %icon;
+  background-image: url("../img/p12.png");
+}
+
+.icon-text {
+  padding-left: 160px;
+}
+
+.inst {
+  width: 31.2%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
 
