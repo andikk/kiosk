@@ -5657,3 +5657,12 @@ body {
   width: 31.2%;
   margin-left: 20px;
   margin-bottom: 20px; }
+
+.margin-main {
+  margin-bottom: 120px; }
+
+.life {
+  width: 31.2%;
+  padding-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px; }
