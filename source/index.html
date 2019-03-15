@@ -14,11 +14,11 @@
 <body>
 
   <header>
-    <h1 class="text-center text-uppercase pt-3">Интерактивный киоск СКФУ</h1>
+    <h1 class="text-center text-uppercase pt-3 kiosk-title">Интерактивный киоск СКФУ</h1>
   </header>
 
   <main>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row mb-2 mt-lg-2">
         <div class="col-12 col-xl-6 mb-2">
           <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -118,32 +118,32 @@
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
          <div class="card">
            <div class="card-header">
              <h5 class="text-center mb-0" id="Date"></h5>
            </div>
-           <div class="card-body text-center py-1">
+           <div class="card-body text-center py-0">
              <div id="myclock"></div>
            </div>
-           <div class="card-footer text-center">
+           <div class="card-footer text-center p-0">
              <span id="hours"> </span>
              <span id="point">:</span>
              <span id="min"> </span>
              <span id="point">:</span>
              <span id="sec"> </span>
-             <p class="m-0">3-я пара 11:20 - 12:50</p>
+             <p class="py-0 m-0">3-я пара 11:20 - 12:50</p>
            </div>
          </div>
        </div>
        <div class="col">
         <div class="card">
           <div class="card-header">
-            <h3 class="h6 text-center mb-0 pb-0">Погода по данным астрофизической обсерватории СКФУ</h3>
+            <h3 class="weather-title text-center mb-0 pb-0">Погода по данным астрофизической обсерватории СКФУ</h3>
           </div>
-          <div class="card-body pb-3">
+          <div class="card-body pb-3 weather-block">
             <table class="w-100 table-weather">
               <tr>
                 <td>Температура:</td>
@@ -169,9 +169,15 @@
                 <td>Осадки:</td>
                 <td>80 <!--dailyRain-->&nbsp;</td>
               </tr>
+
+              <tr>
+                <td>Восход: 06:30 <!--sunriseTime--></td>
+                <td>Закат: 18:20 <!--sunsetTime--></td>
+              </tr>
             </table>
-            <br>
-            <p>Восход: 06:30 <!--sunriseTime-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Закат: 18:20 <!--sunsetTime--></p>
+            <p class="text-update m-0 text-right">По состоянию на: 15.03.2018 16:23 <!--Date--> <!--Time--></p>
+
+
           </div>
         </div>
       </div>
