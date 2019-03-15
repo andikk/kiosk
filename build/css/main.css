@@ -5567,6 +5567,9 @@ body {
   background: url("../img/background.png");
   background-repeat: repeat; }
 
+.margin-main {
+  margin-bottom: 120px; }
+
 .btn-menu-lg {
   width: 30%;
   white-space: normal; }
@@ -5582,6 +5585,9 @@ body {
   border-bottom-right-radius: 5px;
   color: #fff;
   background-color: #356292; }
+
+.table-weather tr {
+  height: 58px; }
 
 .map {
   position: relative; }
@@ -5655,5 +5661,25 @@ body {
 
 .inst {
   width: 31.2%;
+  margin-left: 20px;
+  margin-bottom: 20px; }
+
+.address {
+  padding-left: 200px;
+  position: relative; }
+
+.address::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 128px;
+  height: 128px;
+  background: url("../img/address-icon.png"); }
+
+.life {
+  width: 31.2%;
+  padding-top: 10px;
   margin-left: 20px;
   margin-bottom: 20px; }

@@ -14,7 +14,7 @@
 <body>
 
   <header>
-    <h1 class="text-center text-uppercase pt-3 d-block d-lg-none">Интерактивный киоск СКФУ</h1>
+    <h1 class="text-center text-uppercase pt-3">Интерактивный киоск СКФУ</h1>
   </header>
 
   <main>
@@ -58,8 +58,8 @@
           <nav>
             <div class="row mb-3">
               <div class="col d-flex justify-content-between">
-                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='http://ncfu.ru'"><span class="d-block">Веб-портал СКФУ</span><span class="d-block"><img class="w-50" src="img/btn-skfu.svg" alt="Веб-портал СКФУ"/></span></button>
-                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='https://ecampus.ncfu.ru'"><span class="d-block">Электронный кампус СКФУ</span><span class="d-block"><img class="w-50" src="img/btn-ecampus.png" alt="еКампус"/></span></button>
+                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='ncfu.html'"><span class="d-block">Веб-портал СКФУ</span><span class="d-block"><img class="w-50" src="img/btn-skfu.svg" alt="Веб-портал СКФУ"/></span></button>
+                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='ecampus.html'"><span class="d-block">Электронный кампус СКФУ</span><span class="d-block"><img class="w-50" src="img/btn-ecampus.png" alt="еКампус"/></span></button>
                 <div class="btn-group btn-group-toggle btn-menu-lg" data-toggle="buttons">
                   <label class="btn btn-primary active d-flex flex-column align-items-center justify-content-around w-100">
                     <input type="radio" name="options" id="Russian" autocomplete="off" checked>Русский<span class="d-block"><img height="20" src="img/btn-ru.svg" alt="Русский"/></span>
@@ -83,7 +83,7 @@
               <div class="col d-flex justify-content-between">
                 <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='institutes.html'"><span class="d-block">Институты</span><span class="d-block"><img class="w-50" src="img/btn-inst.png" alt="Институты"/></span></button>
                 <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='vizit.html'"><span class="d-block">Визитная карточка СКФУ</span><span class="d-block"><img class="w-50" src="img/btn-vizit.png" alt="Визитная карточка СКФУ" /></span></button>
-                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg"><span class="d-block">Студенческая жизнь</span><span class="d-block"><img class="w-50" src="img/btn-stud.png" alt="Студенческая жизнь"/></span></button>
+                <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-menu-lg" onclick="window.location='life.html'"><span class="d-block">Студенческая жизнь</span><span class="d-block"><img class="w-50" src="img/btn-stud.png" alt="Студенческая жизнь"/></span></button>
               </div>
             </div>
           </nav>
@@ -98,15 +98,15 @@
             <div id="carousel-news" class="carousel slide pb-5" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item p-3 active">
-                  <h5 class="text-center mb-3">Преподаватель СКФУ провела тренинг для руководителей образовательных учреждений</h5>
+                  <h2 class="h5 text-center mb-3">Преподаватель СКФУ провела тренинг для руководителей образовательных учреждений</h2>
                   <p class="px-2">В рамках реализации Президентской программы «Управление в сфере образования» доцент кафедры психологии Татьяна Майборода провела деловые игры и тренинги для руководителей образовательных организаций Ставропольского края и Республики Северная Осетия-Алания.</p>
                 </div>
                 <div class="carousel-item p-3">
-                  <h5 class="text-center mb-3">Ректор СКФУ выступила на конференции «Теология в современном научно-образовательном пространстве»</h5>
+                  <h2 class="h5 text-center mb-3">Ректор СКФУ выступила на конференции «Теология в современном научно-образовательном пространстве»</h2>
                   <p class="px-2">Ректор Северо-Кавказского федерального университета Алина Левитская выступила с докладом на пленарном заседании II Всероссийской научной конференции «Теология в современном научно-образовательном пространстве». Конференция прошла под председательством Святейшего Патриарха Московского и всея Руси Кирилла на базе Национального исследовательского ядерного университета «МИФИ».</p>
                 </div>
                 <div class="carousel-item p-3">
-                  <h5 class="text-center mb-3">Представители СКФУ поучаствовали в Неделе сбережений</h5>
+                  <h2 class="h5 text-center mb-3">Представители СКФУ поучаствовали в Неделе сбережений</h2>
                   <p class="px-2">Заведующая кафедрой финансов и кредита, профессор Наталья Куницына и доцент кафедры бухгалтерского учёта, анализа и аудита Виктория Макарьева поучаствовали в официальном открытии Недели сбережения в Ставропольском крае. Мероприятие проводится в рамках федерального проекта по повышению финансовой грамотности населения.</p>
                 </div>
               </div>
@@ -141,11 +141,37 @@
        <div class="col">
         <div class="card">
           <div class="card-header">
-            <h5 class="text-center mb-0 pb-0">Погода в Ставрополе</h5>
+            <h3 class="h6 text-center mb-0 pb-0">Погода по данным астрофизической обсерватории СКФУ</h3>
           </div>
           <div class="card-body pb-3">
-            <table class="w-100 weather-table">
+            <table class="w-100 table-weather">
+              <tr>
+                <td>Температура:</td>
+                <td>  5 <!--outsideTemp--> C</td>
+              </tr>
+
+              <tr>
+                <td>Влажность:</td>
+                <td> 30% <!--outsideHumidity--></td>
+              </tr>
+
+              <tr>
+                <td>Ветер: </td>
+                <td>направление <!--windDirection--> скорость <!--windSpeed-->&nbsp;м/с</td>
+              </tr>
+
+              <tr>
+                <td>Давление:</td>
+                <td>753 мм<!--barometer-->&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Осадки:</td>
+                <td>80 <!--dailyRain-->&nbsp;</td>
+              </tr>
             </table>
+            <br>
+            <p>Восход: 06:30 <!--sunriseTime-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Закат: 18:20 <!--sunsetTime--></p>
           </div>
         </div>
       </div>

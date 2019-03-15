@@ -5586,6 +5586,9 @@ body {
   color: #fff;
   background-color: #356292; }
 
+.table-weather tr {
+  height: 58px; }
+
 .map {
   position: relative; }
 

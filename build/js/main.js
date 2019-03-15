@@ -55,28 +55,4 @@ $(document).ready(function() {
     }
 
 
-  $('.weather-header').html(cityLocalName);
-    var weatherTable = $('.weather-table');
-    weatherTable.html('<tr><th class="text-center">' + dateLocaleLable + '</th>' + '<th class="text-center">' + tempLocaleLable + '</th><th></th></tr>');
-    weatherTable.append('<tbody>');
-
-    var jqxhr = $.get('https://api.worldweatheronline.com/premium/v1/weather.ashx', queryParams);
-    jqxhr.done(function (responseData) {
-        var weatherBody = $('.weather-table tbody');
-        $.each(responseData, function (weatherData, dataElement) {
-            var weather = dataElement.weather;
-            $.each(weather, function (weatherElement, value) {
-                var tmpDate = String(value.date);
-                var tmpDateArray = tmpDate.split("-");
-                var tmpWeatherIconUrl = value.hourly[0]['weatherIconUrl'];
-                var weatherString = '<tr><td class="text-center">' + tmpDateArray[2] + '.' + tmpDateArray[1] + '.' + tmpDateArray[0] + '</td>'
-                    + '<td class="text-center">' + value.mintempC + '&#8451' + ' &#8660 ' + value.maxtempC + '&#8451</td>'
-                    + '<td class="text-center"><img src="' + tmpWeatherIconUrl[0]['value'] + '"/></td></tr>';
-                weatherBody.append(weatherString);
-            });
-
-        });
-    })
-
-
    });

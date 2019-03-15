@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <title>Интерактивный киоск СКФУ</title>
+  <!--<link rel="preload" href="fonts/arimo-regular-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/arimo-bold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/arimo-italic-webfont.woff2" as="font" crossorigin="anonymous">-->
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="text-center text-uppercase pt-3">Творческие студии</h1>
+  </header>
+
+  <main class="margin-main">
+    <div class="container">
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Отдел культурно-эстетического воспитания
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <p>Контактная информация:<br>
+          Телефон: (8652)-94-41-83<br>
+          E-mail: okev@ncfu.ru<br>
+        </p>
+
+        <p>График работы:<br>
+        Пн.-Пт.: с 9.00 до 18.00<br>
+        Перерыв: с 13.00 до 14.00<br>
+
+        <p>Начальник отдела - Шимко Анна Витальевна</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Студия бального танца "Талисман"
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <p>Руководитель: Брежнева Анастасия Игоревна (8-963-385-71-01).</p>
+        <p>Расписание: понедельник с 17:00 до 19:30, г. Ставрополь, пр. Кулакова, 2, корпус 9, концертный зал;<br>
+          вторник и четверг с 19:00 до 21:00, г. Ставрополь, ул. Доваторцев, 47/1, оперный зал СКФУ.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Студия иллюзионной драматургии «Иллюзионер»
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <p>Руководитель: Воинов Игорь Владимирович (8-9624-430-502), <br>специалист: Сергеев Роман Анатольевич.</p>
+        <p>Расписание: вторник, четверг и пятницу с 18:00 до 21:30, г. Ставрополь, пр. Кулакова, 2, корпус 9, блок А;<br>
+        суббота и воскресенье с 18:00 до 20:00, г. Ставрополь, пр. Кулакова, 2, корпус 9, актовый зал.</p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row fixed-bottom py-3 border-top bg-light">
+        <div class="col-12">
+          <div class="d-flex justify-content-end container">
+
+            <button class="btn btn-primary btn-lg mr-auto" onclick="window.location='index.html'">
+              <img src="img/logo-white.svg" height="50" alt="На главную">
+            </button>
+
+            <button class="btn btn-primary btn-lg ml-1" onclick="history.back()">
+              <img src="img/arrow-left.svg" height="50" alt="Назад">
+            </button>
+
+            <button class="btn btn-primary btn-lg ml-1" onclick="#">
+              <img src="img/arrow-up.svg" height="50" alt="Вверх">
+            </button>
+
+            <button class="btn btn-primary btn-lg ml-1" onclick="#">
+              <img src="img/arrow-down.svg" height="50" alt="Вниз">
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.thooClock.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
