@@ -54,15 +54,13 @@ $(document).ready(function() {
         tempLocaleLable = "Temperature";
     }
 
-   // LoadWeather();
+    LoadWeather();
 
-   function LoadWeather() {
-  $( ".weather" ).load( "Weather_Summary_Monitor4.htm");
-  alert("123");
-}
+    function LoadWeather() {
+      $( ".weather" ).load( "Weather_Summary_Monitor4.htm");
+    }
 
-setTimeout(LoadWeather, 10000);
-
+    setInterval(LoadWeather, 10000);
  });
 
 
