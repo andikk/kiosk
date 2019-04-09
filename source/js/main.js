@@ -53,14 +53,65 @@ $(document).ready(function() {
         dateLocaleLable = "Date";
         tempLocaleLable = "Temperature";
     }
-
+//загрузка данных о погоде
+//сначала загружаем при загрузке страницы в первый раз
     LoadWeather();
 
     function LoadWeather() {
       $( ".weather" ).load( "Weather_Summary_Monitor4.htm");
     }
-
+//а потом обновлем с опеределнныминтервалом
     setInterval(LoadWeather, 10000);
+
+//загрузка новостей
+var newsTitel;
+var newsText;
+
+var requestURL = "http://195.209.244.38/handleSolrSelect";
+var requestString = requestURL + "?q=*&fq=type:NewsBlock&fq=category:\"/Glavnaya\"&wt=json";
+
+
+$.get('data.json',function (data) {
+
+   var docs = data.response.docs
+
+   $.each(docs, function (i, value) {
+     var newsTitel = value.Title_prop;
+     var newsText = value.ru_excerpt;
+
+     //контейнер для слайдера новостей, в него будем добавлять новости
+     var carousel = document.querySelector('.carousel-inner-news');
+
+     //находим шаблон для вставки в конетейнер слайдера новостей
+     var newsTemplate = document.querySelector('#news-template').content;
+
+     //находим блок с содержимым новости
+     var newNewsTemplate = newsTemplate.querySelector('.news-item');
+
+     //если это первый слайд добавим класс active
+     if (i === 1) {
+       newNewsTemplate.classList.add('active');
+     }
+     else {
+      newNewsTemplate.classList.remove('active');
+     }
+
+     //склонируем html элемент
+     var news = newNewsTemplate.cloneNode(true);
+
+     //добавим заголовок новости
+     var newsTitelHTML = news.querySelector('.news-title');
+     newsTitelHTML.textContent = newsTitel;
+
+     //добавим текст новости
+     var newsTextHTML = news.querySelector('.news-text');
+     newsTextHTML.textContent = newsText;
+
+     //вставим сформированную разметку в контейнер для новостей
+     carousel.appendChild(news);
+   })
+},"json");
+
  });
 
 

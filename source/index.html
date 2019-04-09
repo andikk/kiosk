@@ -9,6 +9,31 @@
   <link rel="preload" href="fonts/arimo-bold-webfont.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/arimo-italic-webfont.woff2" as="font" crossorigin="anonymous">-->
   <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="СКФУ">
+  <meta name="apple-mobile-web-app-title" content="СКФУ">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#E6E6FA">
 </head>
 
 <body>
@@ -96,19 +121,22 @@
             <h5 class="text-uppercase p-2 d-inline-block news-header">Новостная лента</h5>
 
             <div id="carousel-news" class="carousel slide pb-5" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item p-3 active">
+              <div class="carousel-inner carousel-inner-news">
+<!--
+                <div class="carousel-item px-1 active">
                   <h2 class="h5 text-center mb-3">Преподаватель СКФУ провела тренинг для руководителей образовательных учреждений</h2>
                   <p class="px-2">В рамках реализации Президентской программы «Управление в сфере образования» доцент кафедры психологии Татьяна Майборода провела деловые игры и тренинги для руководителей образовательных организаций Ставропольского края и Республики Северная Осетия-Алания.</p>
                 </div>
-                <div class="carousel-item p-3">
+                <div class="carousel-item px-1">
                   <h2 class="h5 text-center mb-3">Ректор СКФУ выступила на конференции «Теология в современном научно-образовательном пространстве»</h2>
                   <p class="px-2">Ректор Северо-Кавказского федерального университета Алина Левитская выступила с докладом на пленарном заседании II Всероссийской научной конференции «Теология в современном научно-образовательном пространстве». Конференция прошла под председательством Святейшего Патриарха Московского и всея Руси Кирилла на базе Национального исследовательского ядерного университета «МИФИ».</p>
                 </div>
-                <div class="carousel-item p-3">
+                <div class="carousel-item ">
                   <h2 class="h5 text-center mb-3">Представители СКФУ поучаствовали в Неделе сбережений</h2>
                   <p class="px-2">Заведующая кафедрой финансов и кредита, профессор Наталья Куницына и доцент кафедры бухгалтерского учёта, анализа и аудита Виктория Макарьева поучаствовали в официальном открытии Недели сбережения в Ставропольском крае. Мероприятие проводится в рамках федерального проекта по повышению финансовой грамотности населения.</p>
                 </div>
+-->
+
               </div>
             </div>
           </div>
@@ -120,7 +148,7 @@
   <footer>
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
+        <div class="col clock">
          <div class="card">
            <div class="card-header">
              <h5 class="text-center mb-0" id="Date"></h5>
@@ -139,18 +167,39 @@
          </div>
        </div>
 
-      <div class="weather">
+      <div class="col weather">
       </div>
 
     </div>
   </div>
 </footer>
 
+<template id="news-template">
+  <div class="carousel-item px-1 news-item">
+    <h2 class="h5 text-center mb-3 news-title"></h2>
+    <p class="px-2 news-text"></p>
+  </div>
+</template>
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.thooClock.js"></script>
 <script src="js/main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+ window.addEventListener('load', function() {
+   navigator.serviceWorker.register('/sw.js').then(
+     function(registration) {
+       // Registration was successful
+       console.log('ServiceWorker registration successful with scope: ', registration.scope); },
+     function(err) {
+       // registration failed :(
+       console.log('ServiceWorker registration failed: ', err);
+     });
+ });
+}
+</script>
 
 
 </body>

@@ -17,6 +17,7 @@ $primary: #356292;
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/popover";
+@import "responsive-fonts.scss";
 
 /*
 @font-face {
@@ -71,10 +72,29 @@ body {
   }
 }
 
+.btn-group {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 .news {
   height: 280px;
+  @include media-breakpoint-only(xs) {
+    height: auto;
+  }
+
   @include media-breakpoint-up(xl) {
     height: 200px;
+  }
+}
+
+.clock {
+  display: block;
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }
 
@@ -86,10 +106,9 @@ body {
 }
 
 .weather-title {
-  font-size: 1rem;
+  font-size: 0.9rem; //для больших
   @include media-breakpoint-up(xl) {
-    font-size: 1.25rem;
-
+    font-size: 1rem; //для маленьких
   }
 }
 
@@ -112,12 +131,17 @@ body {
   font-size: 16px;
 }
 
+.down-menu-button-img {
+  @include media-breakpoint-down(sm) {
+    height: 20px;
+  }
+}
+
+//для страниц, где есть iframe (Сайт СКФУ и еКампус)
 iframe {
   position: relative;
   z-index: -10;
 }
-
-
 
 
 //Стили для страницы Корпуса
@@ -147,9 +171,23 @@ iframe {
 
 .btn-korpus {
   width: 8%;
+
+  @include media-breakpoint-down(sm) {
+    width: 30%;
+  }
 }
 
 //Стили для страницы Визитка
+.icon-text {
+  padding-left: 160px;
+  @include media-breakpoint-down(sm) {
+    word-break: break-all;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
 %icon {
   background-size: 80%;
   background-repeat: no-repeat;
@@ -158,77 +196,125 @@ iframe {
   width: 540px;
   height: 77px;
   font-size: 16px;
+  @include media-breakpoint-down(sm) {
+    width: auto;
+    background-size: 100%;
+    background-position-x: left;
+  }
 }
 
 .icon1 {
   @extend %icon;
   background-image: url("../img/p1.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon2 {
   @extend %icon;
   background-image: url("../img/p2.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon3 {
   @extend %icon;
   background-image: url("../img/p3.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon4 {
   @extend %icon;
   background-image: url("../img/p4.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon5 {
   @extend %icon;
   background-image: url("../img/p5.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon6 {
   @extend %icon;
   background-image: url("../img/p6.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon7 {
   @extend %icon;
   background-image: url("../img/p7.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon8 {
   @extend %icon;
   background-image: url("../img/p8.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon9 {
   @extend %icon;
   background-image: url("../img/p9.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon10 {
   @extend %icon;
   background-image: url("../img/p10.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon11 {
   @extend %icon;
   background-image: url("../img/p11.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
 .icon12 {
   @extend %icon;
   background-image: url("../img/p12.png");
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+  }
 }
 
-.icon-text {
-  padding-left: 160px;
-}
+
 
 //Институты
-.inst {
+.card-inst {
   width: 31.2%;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
+
+  @include media-breakpoint-down(md) {
+    width: 40%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
 }
 
 //Детальная страница института
@@ -249,12 +335,19 @@ iframe {
 }
 
 
-
-
 //Студенческая жизнь
-.life {
+.card-life {
   width: 31.2%;
-  padding-top: 10px;
-  margin-left: 20px;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
+
+  @include media-breakpoint-down(md) {
+    width: 40%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
 }

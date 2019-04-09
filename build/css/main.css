@@ -5538,6 +5538,59 @@ textarea.form-control {
   padding: 0.5rem 0.75rem;
   color: #212529; }
 
+html {
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 992px) {
+    html {
+      font-size: 18px; } }
+
+h1, .h1 {
+  font-size: 2.48832rem; }
+
+h2, .h2 {
+  font-size: 2.0736rem; }
+
+h3, .h3 {
+  font-size: 1.728rem; }
+
+h4, .h4 {
+  font-size: 1.44rem; }
+
+h5, .h5 {
+  font-size: 1.2rem; }
+
+h6, .h6 {
+  font-size: 1rem; }
+
+.display-4 {
+  font-size: 3.48832rem; }
+
+.display-3 {
+  font-size: 4.18598rem; }
+
+.display-2 {
+  font-size: 5.02318rem; }
+
+.display-1 {
+  font-size: 6.02782rem; }
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 2.48832rem; }
+  h2, .h2 {
+    font-size: 2.0736rem; }
+  h3, .h3 {
+    font-size: 1.728rem; }
+  h4, .h4 {
+    font-size: 1.44rem; }
+  h5, .h5 {
+    font-size: 1.2rem; }
+  h6, .h6 {
+    font-size: 1rem; } }
+
 /*
 @font-face {
   font-family: 'Arimo', sans-serif;
@@ -5565,29 +5618,86 @@ textarea.form-control {
 */
 body {
   background: url("../img/background.png");
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  -webkit-user-select: none; }
 
 .margin-main {
   margin-bottom: 120px; }
 
+.kiosk-title {
+  display: block; }
+  @media (min-width: 1200px) {
+    .kiosk-title {
+      display: none; } }
+
 .btn-menu-lg {
   width: 30%;
-  white-space: normal; }
+  white-space: normal;
+  height: 125px; }
+  @media (min-width: 1200px) {
+    .btn-menu-lg {
+      height: 115px; } }
+
+@media (max-width: 767.98px) {
+  .btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 .news {
-  height: 260px; }
+  height: 280px; }
+  @media (max-width: 575.98px) {
+    .news {
+      height: auto; } }
   @media (min-width: 1200px) {
     .news {
-      height: 240px; } }
+      height: 200px; } }
+
+.clock {
+  display: block; }
+  @media (max-width: 767.98px) {
+    .clock {
+      display: none; } }
 
 .news-header {
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #fff;
-  background-color: #356292; }
+  background-color: #9b9eb3; }
+
+.weather-title {
+  font-size: 0.9rem; }
+  @media (min-width: 1200px) {
+    .weather-title {
+      font-size: 1rem; } }
 
 .table-weather tr {
-  height: 58px; }
+  height: 50px; }
+  @media (min-width: 1200px) {
+    .table-weather tr {
+      height: 49px; } }
+
+.weather-block {
+  color: white;
+  font-size: 20px;
+  background-image: url("../img/weather-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.text-update {
+  font-size: 16px; }
+
+@media (max-width: 767.98px) {
+  .down-menu-button-img {
+    height: 20px; } }
+
+iframe {
+  position: relative;
+  z-index: -10; }
 
 .map {
   position: relative; }
@@ -5610,6 +5720,17 @@ body {
 
 .btn-korpus {
   width: 8%; }
+  @media (max-width: 767.98px) {
+    .btn-korpus {
+      width: 30%; } }
+
+.icon-text {
+  padding-left: 160px; }
+  @media (max-width: 767.98px) {
+    .icon-text {
+      word-break: break-all;
+      padding-left: 20px;
+      padding-bottom: 20px; } }
 
 .icon1, .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8, .icon9, .icon10, .icon11, .icon12 {
   background-size: 80%;
@@ -5619,50 +5740,95 @@ body {
   width: 540px;
   height: 77px;
   font-size: 16px; }
+  @media (max-width: 767.98px) {
+    .icon1, .icon2, .icon3, .icon4, .icon5, .icon6, .icon7, .icon8, .icon9, .icon10, .icon11, .icon12 {
+      width: auto;
+      background-size: 100%;
+      background-position-x: left; } }
 
 .icon1 {
   background-image: url("../img/p1.png"); }
+  @media (max-width: 767.98px) {
+    .icon1 {
+      background-image: none; } }
 
 .icon2 {
   background-image: url("../img/p2.png"); }
+  @media (max-width: 767.98px) {
+    .icon2 {
+      background-image: none; } }
 
 .icon3 {
   background-image: url("../img/p3.png"); }
+  @media (max-width: 767.98px) {
+    .icon3 {
+      background-image: none; } }
 
 .icon4 {
   background-image: url("../img/p4.png"); }
+  @media (max-width: 767.98px) {
+    .icon4 {
+      background-image: none; } }
 
 .icon5 {
   background-image: url("../img/p5.png"); }
+  @media (max-width: 767.98px) {
+    .icon5 {
+      background-image: none; } }
 
 .icon6 {
   background-image: url("../img/p6.png"); }
+  @media (max-width: 767.98px) {
+    .icon6 {
+      background-image: none; } }
 
 .icon7 {
   background-image: url("../img/p7.png"); }
+  @media (max-width: 767.98px) {
+    .icon7 {
+      background-image: none; } }
 
 .icon8 {
   background-image: url("../img/p8.png"); }
+  @media (max-width: 767.98px) {
+    .icon8 {
+      background-image: none; } }
 
 .icon9 {
   background-image: url("../img/p9.png"); }
+  @media (max-width: 767.98px) {
+    .icon9 {
+      background-image: none; } }
 
 .icon10 {
   background-image: url("../img/p10.png"); }
+  @media (max-width: 767.98px) {
+    .icon10 {
+      background-image: none; } }
 
 .icon11 {
   background-image: url("../img/p11.png"); }
+  @media (max-width: 767.98px) {
+    .icon11 {
+      background-image: none; } }
 
 .icon12 {
   background-image: url("../img/p12.png"); }
+  @media (max-width: 767.98px) {
+    .icon12 {
+      background-image: none; } }
 
-.icon-text {
-  padding-left: 160px; }
-
-.inst {
+.card-inst {
   width: 31.2%;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px; }
+  @media (max-width: 991.98px) {
+    .card-inst {
+      width: 40%; } }
+  @media (max-width: 767.98px) {
+    .card-inst {
+      width: 100%; } }
 
 .address {
   padding-left: 200px;
@@ -5678,8 +5844,15 @@ body {
   height: 128px;
   background: url("../img/address-icon.png"); }
 
-.life {
+.card-life {
   width: 31.2%;
-  padding-top: 10px;
-  margin-left: 20px;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px; }
+  @media (max-width: 991.98px) {
+    .card-life {
+      width: 40%; } }
+  @media (max-width: 767.98px) {
+    .card-life {
+      width: 100%; } }
