@@ -67,20 +67,30 @@ $(document).ready(function() {
 var newsTitel;
 var newsText;
 
+//контейнер для слайдера новостей, в него будем добавлять новости
+var carousel = document.querySelector('.carousel-inner-news');
+
 var requestURL = "http://195.209.244.38/handleSolrSelect";
 var requestString = requestURL + "?q=*&fq=type:NewsBlock&fq=category:\"/Glavnaya\"&wt=json";
 
+var allNews = {};
 
-$.get('data.json',function (data) {
+$.get('data2.json',function (data2) {
+  //загрузили объект parts
+  var parts = data2.parts;
 
-   var docs = data.response.docs
+  //перебираем parts
+  $.each(parts, function (i, partId) {
+    //находим новость с конкретным ID
+    newsItem=data2[partId];
 
-   $.each(docs, function (i, value) {
-     var newsTitel = value.Title_prop;
-     var newsText = value.ru_excerpt;
+    //конвертируем из JSON обекта в JavaScript объект
+    newsItemJS = $.parseJSON(newsItem);
 
-     //контейнер для слайдера новостей, в него будем добавлять новости
-     var carousel = document.querySelector('.carousel-inner-news');
+    //получаем значения полей
+    var newsTitel = newsItemJS.title;
+    var newsText = newsItemJS.short_description;
+    var newsFullText = newsItemJS.full_description
 
      //находим шаблон для вставки в конетейнер слайдера новостей
      var newsTemplate = document.querySelector('#news-template').content;
@@ -93,7 +103,7 @@ $.get('data.json',function (data) {
        newNewsTemplate.classList.add('active');
      }
      else {
-      newNewsTemplate.classList.remove('active');
+       newNewsTemplate.classList.remove('active');
      }
 
      //склонируем html элемент
@@ -107,14 +117,75 @@ $.get('data.json',function (data) {
      var newsTextHTML = news.querySelector('.news-text');
      newsTextHTML.textContent = newsText;
 
+     //вешаем обработчик события на кнопку Подробнее
+     var buttonMore = news.querySelector('.button-more');
+     buttonMore.addEventListener( "click" , function() {
+       //меняем содержимое модального окна
+       var modalTitle=document.querySelector('.modal-title');
+       modalTitle.textContent=newsTitel;
+
+       var modalBody=document.querySelector('.modal-body--index');
+       modalBody.innerHTML = newsFullText;
+
+       var newsLinks=modalBody.querySelectorAll('a');
+       for (n = 0; n < newsLinks.length; n++) {
+         newsLinks[n].removeAttribute('href');
+       }
+
+       var newsImages=modalBody.querySelectorAll('img');
+       for (k = 0; k < newsImages.length; k++) {
+         var imagePath = newsImages[k].src;
+         imagePath ="http://195.209.244.38/" + imagePath.substr(22);
+         //console.log(imagePath);
+         newsImages[k].src = imagePath;
+       }
+
+     });
+
      //вставим сформированную разметку в контейнер для новостей
      carousel.appendChild(news);
-   })
+
+  })
+
 },"json");
 
- });
+//функция для инициализации библиотеки для прокрутки
+function scrollInit() {
+  //инициализировали jScrollPane
+  $('.modal-body--index').jScrollPane();
+
+  //получили ссылку на апи
+  var pane = $('.modal-body--index');
+  var api = pane.data('jsp');
+
+  //по клику по кнопкам прокручиваем окно
+  $('.btn--down').click(function () {
+    api.scrollByY(300);
+    return false;
+  });
+
+  $('.btn--up').click(function () {
+    api.scrollByY(-300);
+    return false;
+  });
+}
+
+//при открытии модального окна инициализируем библиотеку для прокрутки
+//необходимо вызывать при открытии, т.к. только после откытия считается высота содержимого окна
+$('#ModalCenter').on('shown.bs.modal', function (e) {
+  scrollInit();
+})
+
+//при закрытии модального окна очищаем библиотеку для прокртки
+$('#ModalCenter').on('hidden.bs.modal', function (e) {
+  var pane = $('.modal-body--index');
+  var api = pane.data('jsp');
+  api.destroy();
+})
 
 
+
+});
 
 
 

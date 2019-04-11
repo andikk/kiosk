@@ -17,6 +17,8 @@ $primary: #356292;
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/modal";
 @import "responsive-fonts.scss";
 
 /*
@@ -141,6 +143,31 @@ body {
 iframe {
   position: relative;
   z-index: -10;
+}
+
+.modal-body--index {
+  //здесь написать правила для больших
+  @include media-breakpoint-up(xl) { //для маленьких
+    max-height: 700px;
+    overflow-y: scroll;
+  }
+}
+
+.modal-lg--index {
+  //здесь написать правила для больших
+  @include media-breakpoint-up(xl) { //для маленьких
+    max-width: 1000px;
+  }
+}
+
+//цвет полосы прокуртки для scroll pane
+.jspTrack {
+    background: #eee;
+}
+
+//цвет бегунка прокрутки для scroll pane
+.jspDrag {
+    background: #bcbcbc;
 }
 
 
