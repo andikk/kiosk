@@ -37,7 +37,7 @@ $(document).ready(function() {
      $('#myclock').thooClock({
        dialColor:'#222',
        secondHandColor:'#C00',
-       size:300,
+       size:220,
        showNumerals:false,
        brandText:'СКФУ'
      });
@@ -139,7 +139,6 @@ $.get('data2.json',function (data2) {
          //console.log(imagePath);
          newsImages[k].src = imagePath;
        }
-
      });
 
      //вставим сформированную разметку в контейнер для новостей
@@ -150,7 +149,7 @@ $.get('data2.json',function (data2) {
 },"json");
 
 //функция для инициализации библиотеки для прокрутки
-function scrollInit() {
+function scrollInitModal() {
   //инициализировали jScrollPane
   $('.modal-body--index').jScrollPane();
 
@@ -173,7 +172,7 @@ function scrollInit() {
 //при открытии модального окна инициализируем библиотеку для прокрутки
 //необходимо вызывать при открытии, т.к. только после откытия считается высота содержимого окна
 $('#ModalCenter').on('shown.bs.modal', function (e) {
-  scrollInit();
+  scrollInitModal();
 })
 
 //при закрытии модального окна очищаем библиотеку для прокртки
@@ -183,7 +182,27 @@ $('#ModalCenter').on('hidden.bs.modal', function (e) {
   api.destroy();
 })
 
+function scrollInitPage() {
+   //инициализировали jScrollPane
+  $('.blockToScroll').jScrollPane();
 
+  //получили ссылку на апи
+  var pane = $('.blockToScroll');
+  var api = pane.data('jsp');
+
+  //по клику по кнопкам прокручиваем окно
+  $('.btn-menu--up').click(function () {
+    api.scrollByY(300);
+    return false;
+  });
+
+  $('.btn-menu--down').click(function () {
+    api.scrollByY(-300);
+    return false;
+  });
+}
+
+//scrollInitPage();
 
 });
 

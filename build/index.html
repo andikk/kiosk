@@ -24,7 +24,6 @@
       <div class="row mb-2 mt-lg-2">
         <div class="col-12 col-xl-6 mb-2">
 
-
           <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -101,21 +100,6 @@
 
             <div id="carousel-news" class="carousel slide pb-5" data-ride="carousel">
               <div class="carousel-inner carousel-inner-news">
-<!--
-                <div class="carousel-item px-1 active">
-                  <h2 class="h5 text-center mb-3">Преподаватель СКФУ провела тренинг для руководителей образовательных учреждений</h2>
-                  <p class="px-2">В рамках реализации Президентской программы «Управление в сфере образования» доцент кафедры психологии Татьяна Майборода провела деловые игры и тренинги для руководителей образовательных организаций Ставропольского края и Республики Северная Осетия-Алания.</p>
-                </div>
-                <div class="carousel-item px-1">
-                  <h2 class="h5 text-center mb-3">Ректор СКФУ выступила на конференции «Теология в современном научно-образовательном пространстве»</h2>
-                  <p class="px-2">Ректор Северо-Кавказского федерального университета Алина Левитская выступила с докладом на пленарном заседании II Всероссийской научной конференции «Теология в современном научно-образовательном пространстве». Конференция прошла под председательством Святейшего Патриарха Московского и всея Руси Кирилла на базе Национального исследовательского ядерного университета «МИФИ».</p>
-                </div>
-                <div class="carousel-item ">
-                  <h2 class="h5 text-center mb-3">Представители СКФУ поучаствовали в Неделе сбережений</h2>
-                  <p class="px-2">Заведующая кафедрой финансов и кредита, профессор Наталья Куницына и доцент кафедры бухгалтерского учёта, анализа и аудита Виктория Макарьева поучаствовали в официальном открытии Недели сбережения в Ставропольском крае. Мероприятие проводится в рамках федерального проекта по повышению финансовой грамотности населения.</p>
-                </div>
--->
-
               </div>
             </div>
           </div>
@@ -124,7 +108,7 @@
     </div>
   </main>
 
-  <footer class="d-none">
+  <footer>
     <div class="container-fluid">
       <div class="row">
         <div class="col clock">
@@ -164,13 +148,20 @@
       </div>
       <div class="modal-body">
         <div class="modal-body--index">
-
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn--down">Вниз</button>
-        <button type="button" class="btn btn-secondary btn--up">Вверх</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      <div class="modal-footer d-flex">
+        <button type="button" class="btn btn-secondary mr-auto" data-dismiss="modal">
+          <img src="img/arrow-left.svg" height="40" alt="Закрыть">
+        </button>
+
+        <button type="button" class="btn btn-secondary btn--up" src="img/arrow-up.svg" height="30">
+            <img src="img/arrow-up.svg" height="40" alt="Вверх">
+        </button>
+        <button type="button" class="btn btn-secondary btn--down">
+          <img src="img/arrow-down.svg" height="40" alt="Закрыть">
+        </button>
+
 
       </div>
     </div>
@@ -181,7 +172,7 @@
   <div class="carousel-item px-1 news-item">
     <h2 class="h5 text-center mb-3 news-title"></h2>
     <p class="px-2 news-text"> </p>
-    <button class="btn btn-secondary button-more" data-toggle="modal" data-target="#ModalCenter" data-news-id="">Подробнее</button>
+    <button class="btn btn-secondary button-more ml-2" data-toggle="modal" data-target="#ModalCenter" data-news-id="">Подробнее</button>
   </div>
 </template>
 

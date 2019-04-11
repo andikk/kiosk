@@ -54,6 +54,10 @@ body {
   -webkit-user-select: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .margin-main {
   margin-bottom: 120px;
 }
@@ -81,22 +85,11 @@ body {
   }
 }
 
-
 .news {
-  height: 280px;
-  @include media-breakpoint-only(xs) {
-    height: auto;
-  }
-
-  @include media-breakpoint-up(xl) {
-    height: 200px;
-  }
-}
-
-.clock {
-  display: block;
-  @include media-breakpoint-down(sm) {
-    display: none;
+  height: 280px; //для больших
+  @include media-breakpoint-up(xl) { //для маленьких
+    height: 250px;
+    margin-bottom: 10px;
   }
 }
 
@@ -108,16 +101,9 @@ body {
 }
 
 .weather-title {
-  font-size: 0.9rem; //для больших
+   font-size: 0.9rem; //для больших
   @include media-breakpoint-up(xl) {
-    font-size: 1rem; //для маленьких
-  }
-}
-
-.table-weather tr {
-  height: 50px;
-  @include media-breakpoint-up(xl) {
-    height: 49px;
+    font-size: 1.17rem; //для маленьких
   }
 }
 
@@ -129,6 +115,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.table-weather tr {
+  height: 37px;
+  @include media-breakpoint-up(xl) {
+    height: 36px;
+  }
+}
+
 .text-update {
   font-size: 16px;
 }
@@ -137,12 +130,6 @@ body {
   @include media-breakpoint-down(sm) {
     height: 20px;
   }
-}
-
-//для страниц, где есть iframe (Сайт СКФУ и еКампус)
-iframe {
-  position: relative;
-  z-index: -10;
 }
 
 .modal-body--index {
@@ -162,14 +149,19 @@ iframe {
 
 //цвет полосы прокуртки для scroll pane
 .jspTrack {
-    background: #eee;
+  background: #eee;
 }
 
 //цвет бегунка прокрутки для scroll pane
 .jspDrag {
-    background: #bcbcbc;
+  background: #bcbcbc;
 }
 
+//для страниц, где есть iframe (Сайт СКФУ и еКампус)
+iframe {
+  position: relative;
+  z-index: -10;
+}
 
 //Стили для страницы Корпуса
 .map {
@@ -181,9 +173,9 @@ iframe {
   bottom: 20px;
   left: 40px;
 
-    @include media-breakpoint-up(xl) {
-      left: 20px;
-    }
+  @include media-breakpoint-up(xl) {
+    left: 20px;
+  }
 }
 
 .tab-bg {
@@ -205,6 +197,15 @@ iframe {
 }
 
 //Стили для страницы Визитка
+
+.blockToScroll--vizit {
+  //здесь написать код для больших
+  @include media-breakpoint-up(xl) { //для маленьких
+    max-height: 800px;
+    overflow-y: scroll;
+  }
+}
+
 .icon-text {
   padding-left: 160px;
   @include media-breakpoint-down(sm) {
@@ -213,7 +214,6 @@ iframe {
     padding-bottom: 20px;
   }
 }
-
 
 %icon {
   background-size: 80%;

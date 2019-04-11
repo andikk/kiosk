@@ -5790,6 +5790,9 @@ body {
   background-repeat: repeat;
   -webkit-user-select: none; }
 
+html {
+  overflow-x: hidden; }
+
 .margin-main {
   margin-bottom: 120px; }
 
@@ -5819,18 +5822,10 @@ body {
 
 .news {
   height: 280px; }
-  @media (max-width: 575.98px) {
-    .news {
-      height: auto; } }
   @media (min-width: 1200px) {
     .news {
-      height: 200px; } }
-
-.clock {
-  display: block; }
-  @media (max-width: 767.98px) {
-    .clock {
-      display: none; } }
+      height: 250px;
+      margin-bottom: 10px; } }
 
 .news-header {
   border-top-left-radius: 5px;
@@ -5842,13 +5837,7 @@ body {
   font-size: 0.9rem; }
   @media (min-width: 1200px) {
     .weather-title {
-      font-size: 1rem; } }
-
-.table-weather tr {
-  height: 50px; }
-  @media (min-width: 1200px) {
-    .table-weather tr {
-      height: 49px; } }
+      font-size: 1.17rem; } }
 
 .weather-block {
   color: white;
@@ -5857,16 +5846,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.table-weather tr {
+  height: 37px; }
+  @media (min-width: 1200px) {
+    .table-weather tr {
+      height: 36px; } }
+
 .text-update {
   font-size: 16px; }
 
 @media (max-width: 767.98px) {
   .down-menu-button-img {
     height: 20px; } }
-
-iframe {
-  position: relative;
-  z-index: -10; }
 
 @media (min-width: 1200px) {
   .modal-body--index {
@@ -5882,6 +5873,10 @@ iframe {
 
 .jspDrag {
   background: #bcbcbc; }
+
+iframe {
+  position: relative;
+  z-index: -10; }
 
 .map {
   position: relative; }
@@ -5907,6 +5902,11 @@ iframe {
   @media (max-width: 767.98px) {
     .btn-korpus {
       width: 30%; } }
+
+@media (min-width: 1200px) {
+  .blockToScroll--vizit {
+    max-height: 800px;
+    overflow-y: scroll; } }
 
 .icon-text {
   padding-left: 160px; }

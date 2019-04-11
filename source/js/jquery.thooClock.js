@@ -10,7 +10,7 @@
 (function( $ ) {
 
     $.fn.thooClock = function(options) {
-        
+
         this.each(function() {
 
         var cnv,
@@ -61,7 +61,7 @@
 
             el.brandText = settings.brandText;
             el.brandText2 = settings.brandText2;
-            
+
             el.alarmCount = settings.alarmCount;
             el.alarmTime = settings.alarmTime;
             el.onAlarm = settings.onAlarm;
@@ -70,21 +70,22 @@
             el.onEverySecond = settings.onEverySecond;
 
             x=0; //loopCounter for Alarm
-            
+
             cnv = document.createElement('canvas');
             ctx = cnv.getContext('2d');
 
             cnv.width = this.size;
             cnv.height = this.size;
+
             //append canvas to element
             $(cnv).appendTo(el);
 
             radius = parseInt(el.size/2, 10);
             //translate 0,0 to center of circle:
-            ctx.translate(radius, radius); 
+            ctx.translate(radius, radius);
 
             //set alarmtime from outside:
-            
+
             $.fn.thooClock.setAlarm = function(newtime){
                     var thedate;
                     if(newtime instanceof Date){
@@ -106,7 +107,7 @@
 						thedate.setHours(arr[0],arr[1],arr[2]);
                     }
                     //alert(el.id);
-                    el.alarmTime = thedate;   
+                    el.alarmTime = thedate;
             };
 
             $.fn.thooClock.clearAlarm = function(){
@@ -114,11 +115,11 @@
                     startClock(0,0);
                     $(el).trigger('offAlarm');
             };
-        
+
 
             function toRadians(deg){
                 return ( Math.PI / 180 ) * deg;
-            }     
+            }
 
             function drawDial(color, bgcolor){
                 var dialRadius,
@@ -147,7 +148,7 @@
                 ctx.fillStyle = bgcolor;
                 ctx.fill();
 
-                 
+
                 for (i=1; i<=60; i+=1) {
                     ang=Math.PI/30*i;
                     sang=Math.sin(ang);
@@ -187,19 +188,19 @@
                     ctx.moveTo(sx,sy);
                     ctx.lineTo(ex,ey);
                     ctx.stroke();
-                } 
+                }
 
                 if(el.brandText !== undefined){
                     ctx.font = '100 ' + parseInt(el.size/28,10) + 'px helvetica';
                     brandtextWidth = ctx.measureText (el.brandText).width;
-                    ctx.fillText(el.brandText,-(brandtextWidth/2),(el.size/6)); 
+                    ctx.fillText(el.brandText,-(brandtextWidth/2),(el.size/6));
                 }
 
                 if(el.brandText2 !== undefined){
                     ctx.textBaseline = 'middle';
                     ctx.font = '100 ' + parseInt(el.size/44,10) + 'px helvetica';
                     brandtextWidth2 = ctx.measureText (el.brandText2).width;
-                    ctx.fillText(el.brandText2,-(brandtextWidth2/2),(el.size/5)); 
+                    ctx.fillText(el.brandText2,-(brandtextWidth2/2),(el.size/5));
                 }
 
             }
@@ -220,11 +221,11 @@
                ctx.lineTo(0, length * -1);
                ctx.stroke();
             }
-            
+
 
             function drawSecondHand(seconds, color){
                 var shlength = (radius)-(el.size/40);
-                
+
                 ctx.save();
                 ctx.lineWidth = parseInt(el.size/150,10);
                 ctx.lineCap = "round";
@@ -301,7 +302,7 @@
             function drawAlarmHand(alarm, color, tipcolor){
 
                 var ahlength = el.size/2.4;
-                
+
                 ctx.save();
                 ctx.lineWidth = parseInt(el.size/30, 10);
                 ctx.lineCap = "butt";
@@ -416,7 +417,7 @@
                     $(el).trigger('onEverySecond');
                     y=0;
                 }
-               
+
                 if(el.alarmTime !== undefined){
                     allExtM = (el.alarmTime.getHours()*60*60) + (el.alarmTime.getMinutes() *60) + el.alarmTime.getSeconds();
                 }
@@ -428,7 +429,7 @@
 
                 //alarmMinutes greater than passed Minutes;
                 if(allAlarmM >= allExtM){
-                    x+=1; 
+                    x+=1;
                 }
                 //trigger alarm for as many times as i < alarmCount
                 if(x <= el.alarmCount && x !== 0){
@@ -441,6 +442,6 @@
             startClock(x,y);
 
    });//return each this;
-  };     
+  };
 
 }(jQuery));

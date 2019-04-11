@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/jquery.jscrollpane.min.css" />
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <title>Интерактивный киоск СКФУ</title>
   <!--<link rel="preload" href="fonts/arimo-regular-webfont.woff2" as="font" crossorigin="anonymous">
@@ -19,8 +20,11 @@
 
   <main class="margin-main">
     <div class="container-fluid">
+      <div class="blockToScroll blockToScroll--vizit">
+
       <div class="row mb-3">
         <div class="col">
+
           <div class="d-flex justify-content-between align-items-start mb-4">
             <img class="d-sm-block w-25 rounded" src="img/v1.jpg" alt="Студенты">
             <img class="d-sm-block w-25 rounded" src="img/v2.jpg" alt="Студенты">
@@ -47,7 +51,9 @@
               <div class="icon12 d-flex flex-column justify-content-center"><div class="icon-text">28 учебных корпусов, <br>9 общежитий</div></div>
             </div>
           </div>
+
         </div>
+
       </div>
 
       <div class="row">
@@ -58,6 +64,7 @@
       </div>
 
     </div>
+    </div>
   </main>
 
   <footer>
@@ -66,19 +73,19 @@
         <div class="col-12">
           <div class="d-flex justify-content-end container-fluid">
 
-            <button class="btn btn-primary mr-auto" onclick="window.location='index.html'">
+            <button class="btn btn-secondary mr-auto" onclick="window.location='index.html'">
               <img class="down-menu-button-img" src="img/logo-white.svg" height="50" alt="На главную">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="history.back()">
+            <button class="btn btn-secondary ml-1" onclick="history.back()">
               <img class="down-menu-button-img" src="img/arrow-left.svg" height="50" alt="Назад">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--up">
               <img class="down-menu-button-img" src="img/arrow-up.svg" height="50" alt="Вверх">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--down">
               <img class="down-menu-button-img" src="img/arrow-down.svg" height="50" alt="Вниз">
             </button>
 
@@ -88,13 +95,39 @@
     </div>
   </footer>
 
-
-
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.thooClock.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery.jscrollpane.min.js"></script>
+  <!--<script src="js/main.js"></script>-->
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+
+   //инициализировали jScrollPane
+  $('.blockToScroll').jScrollPane({
+    contentWidth: '0px'
+});
+
+  //получили ссылку на апи
+  var pane = $('.blockToScroll');
+  var api = pane.data('jsp');
+
+  //по клику по кнопкам прокручиваем окно
+  $('.btn-menu--up').click(function () {
+    api.scrollByY(-300);
+    return false;
+  });
+
+  $('.btn-menu--down').click(function () {
+    api.scrollByY(300);
+    return false;
+  });
+
+});
+
+  </script>
 
 
 </body>
