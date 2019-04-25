@@ -73,7 +73,6 @@ var carousel = document.querySelector('.carousel-inner-news');
 var requestURL = "http://195.209.244.38/handleSolrSelect";
 var requestString = requestURL + "?q=*&fq=type:NewsBlock&fq=category:\"/Glavnaya\"&wt=json";
 
-var allNews = {};
 
 $.get('data2.json',function (data2) {
   //загрузили объект parts
@@ -128,6 +127,7 @@ $.get('data2.json',function (data2) {
        modalBody.innerHTML = newsFullText;
 
        var newsLinks=modalBody.querySelectorAll('a');
+       console.log(newsLinks);
        for (n = 0; n < newsLinks.length; n++) {
          newsLinks[n].removeAttribute('href');
        }
