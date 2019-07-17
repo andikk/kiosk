@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/jquery.jscrollpane.min.css" />
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <title>Интерактивный киоск СКФУ</title>
   <!--<link rel="preload" href="fonts/arimo-regular-webfont.woff2" as="font" crossorigin="anonymous">
@@ -17,9 +18,9 @@
     <h1 class="text-center text-uppercase pt-3">Студенческая жизнь</h1>
   </header>
 
-  <main class="margin-main">
+  <main>
     <div class="container-fluid">
-
+      <div class="blockToScroll">
       <div class="row">
 
           <div class="d-flex justify-content-center flex-wrap">
@@ -59,6 +60,7 @@
         </div>
       </div>
     </div>
+    </div>
   </main>
 
  <footer>
@@ -75,11 +77,11 @@
               <img class="down-menu-button-img" src="img/arrow-left.svg" height="50" alt="Назад">
             </button>
 
-            <button class="btn btn-secondary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--up">
               <img class="down-menu-button-img" src="img/arrow-up.svg" height="50" alt="Вверх">
             </button>
 
-            <button class="btn btn-secondary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--down">
               <img class="down-menu-button-img" src="img/arrow-down.svg" height="50" alt="Вниз">
             </button>
 
@@ -88,12 +90,11 @@
       </div>
     </div>
   </footer>
-
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.thooClock.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery.jscrollpane.min.js"></script>
+  <script src="js/page.js"></script>
 
 </body>
 </html>

@@ -14,14 +14,14 @@
 <body>
 
   <header>
-    <h1 class="text-center text-uppercase pt-0">Корпуса и кампусы</h1>
+    <h1 class="text-center text-uppercase pt-0 mb-0">Корпуса и кампусы</h1>
   </header>
 
-  <main class="margin-main">
+  <main class="margin-main1">
     <div class="container-fluid">
-      <div class="row mb-1">
+      <div class="row mb-1 korpus">
         <div class="col-12 col-xl-6 mb-0">
-          <div class="pb-2">
+          <div class="pb-2 korpus-img">
             <img class="d-block w-100 rounded border" src="img/sl-1.jpg">
           </div>
         </div>
@@ -31,7 +31,7 @@
           <button class="btn btn-primary d-flex flex-column align-items-center justify-content-around btn-way"><span class="d-block">Как добраться</span><span class="d-block"><img class="w-25 rounded" src="img/btn-transport.png" alt="Как добраться"/></span></button>
         </div>
       </div>
-      <h2 class="h4 text-center mb-3 mt-3">Проспект Кулакова, 2, лит. Ж</h2>
+      <h2 class="h4 text-center">Проспект Кулакова, 2, лит. Ж</h2>
 
       <div class="row mb-0">
         <div class="col">
@@ -43,9 +43,9 @@
           </nav>
           <div class="tab-content border rounded-right rounded-bottom p-3 tab-bg" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-stav" role="tabpanel" aria-labelledby="nav-stav-tab">
-              <div class="row mb-3">
+              <div class="row">
                 <div class="col">
-                  <h5>Корпуса</h5>
+                  <h5 class="mb-1">Корпуса</h5>
                   <div class="d-flex flex-wrap">
                     <button class="btn btn-lg btn-primary d-block mr-1 mb-1 btn-korpus">№ 1</button>
                     <button class="btn btn-lg btn-primary d-block mr-1 mb-1 btn-korpus">№ 2</button>
@@ -72,9 +72,9 @@
                 </div>
               </div>
 
-              <div class="row mb-3">
+              <div class="row">
                 <div class="col">
-                  <h5>Общежития</h5>
+                  <h5 class="mb-1">Общежития</h5>
                   <div class="d-flex flex-wrap">
                     <button class="btn btn-lg btn-primary d-block mr-1 mb-1 btn-korpus">№ 1</button>
                     <button class="btn btn-lg btn-primary d-block mr-1 mb-1 btn-korpus">№ 2</button>
@@ -88,14 +88,14 @@
                 </div>
               </div>
 
-              <div class="row mb-3">
+              <div class="row">
                 <div class="col">
-                  <h5>Дополнительно</h5>
+                  <h5 class="mb-1">Дополнительно</h5>
                   <div class="d-flex flex-wrap">
-                    <button class="btn btn-lg btn-primary d-block mr-1 mb-1">Научная библиотека</button>
-                    <button class="btn btn-lg btn-primary d-block mr-1 mb-1">Спортзал</button>
-                    <button class="btn btn-lg btn-primary d-block mr-1 mb-1">Спортзал (ЛФК)</button>
-                    <button class="btn btn-lg btn-primary d-block mr-1 mb-1">Бассейн</button>
+                    <button class="btn btn-lg btn-primary d-block mr-1">Научная библиотека</button>
+                    <button class="btn btn-lg btn-primary d-block mr-1">Спортзал</button>
+                    <button class="btn btn-lg btn-primary d-block mr-1">Спортзал (ЛФК)</button>
+                    <button class="btn btn-lg btn-primary d-block mr-1">Бассейн</button>
                   </div>
                 </div>
               </div>
@@ -142,19 +142,19 @@
         <div class="col-12">
           <div class="d-flex justify-content-end container-fluid">
 
-            <button class="btn btn-primary mr-auto" onclick="window.location='index.html'">
+            <button class="btn btn-secondary mr-auto" onclick="window.location='index.html'">
               <img class="down-menu-button-img" src="img/logo-white.svg" height="50" alt="На главную">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="history.back()">
+            <button class="btn btn-secondary ml-1" onclick="history.back()">
               <img class="down-menu-button-img" src="img/arrow-left.svg" height="50" alt="Назад">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--up">
               <img class="down-menu-button-img" src="img/arrow-up.svg" height="50" alt="Вверх">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--down">
               <img class="down-menu-button-img" src="img/arrow-down.svg" height="50" alt="Вниз">
             </button>
 
@@ -167,8 +167,8 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.thooClock.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery.jscrollpane.min.js"></script>
+  <script src="js/page.js"></script>
 
 </body>
 </html>

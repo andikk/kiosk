@@ -20,7 +20,7 @@
 
   <main class="margin-main">
     <div class="container-fluid">
-      <div class="blockToScroll blockToScroll--vizit">
+      <div class="blockToScroll">
 
       <div class="row mb-3">
         <div class="col">
@@ -98,34 +98,9 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.thooClock.js"></script>
   <script src="js/jquery.jscrollpane.min.js"></script>
-  <!--<script src="js/main.js"></script>-->
-  <script type="text/javascript">
+  <script src="js/page.js"></script>
 
-  $(document).ready(function() {
-
-   //инициализировали jScrollPane
-  $('.blockToScroll').jScrollPane({
-    contentWidth: '0px'
-});
-
-  //получили ссылку на апи
-  var pane = $('.blockToScroll');
-  var api = pane.data('jsp');
-
-  //по клику по кнопкам прокручиваем окно
-  $('.btn-menu--up').click(function () {
-    api.scrollByY(-300);
-    return false;
-  });
-
-  $('.btn-menu--down').click(function () {
-    api.scrollByY(300);
-    return false;
-  });
-
-});
 
   </script>
 

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/jquery.jscrollpane.min.css" />
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <title>Интерактивный киоск СКФУ</title>
   <!--<link rel="preload" href="fonts/arimo-regular-webfont.woff2" as="font" crossorigin="anonymous">
@@ -21,32 +22,32 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <iframe id="frame" class="border-0" src="http://www.ncfu.ru/" width="100%" height="4000"></iframe>
+          <iframe id="frame" class="border-0" src="http://195.209.244.38/home" width="100%" height="4000"></iframe>
         </div>
 
       </div>
     </div>
   </main>
 
-  <footer>
+ <footer>
     <div class="container-fluid">
       <div class="row fixed-bottom py-3 border-top bg-light">
         <div class="col-12">
           <div class="d-flex justify-content-end container-fluid">
 
-            <button class="btn btn-primary mr-auto" onclick="window.location='index.html'">
+            <button class="btn btn-secondary mr-auto" onclick="window.location='index.html'">
               <img class="down-menu-button-img" src="img/logo-white.svg" height="50" alt="На главную">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="history.back()">
+            <button class="btn btn-secondary ml-1" onclick="history.back()">
               <img class="down-menu-button-img" src="img/arrow-left.svg" height="50" alt="Назад">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--up">
               <img class="down-menu-button-img" src="img/arrow-up.svg" height="50" alt="Вверх">
             </button>
 
-            <button class="btn btn-primary ml-1" onclick="#">
+            <button class="btn btn-secondary ml-1 btn-menu--down">
               <img class="down-menu-button-img" src="img/arrow-down.svg" height="50" alt="Вниз">
             </button>
 
@@ -59,8 +60,10 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.thooClock.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery.jscrollpane.min.js"></script>
+  <script src="js/page.js"></script>
+
+
 
 </body>
 </html>
